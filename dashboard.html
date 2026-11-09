@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- headers -->
+     <header id="up">
+        <h1>Academie de Saint Denis</h1>
+     </header>
+    
+    <!-- nav bar -->
+     <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="studenttable.html"> Tableau des eleves</a>
+        <a href="teachers.html">Tableau des professeurs</a>
+        <a href="admin.html">Tableau de l'administration</a>
+        <a href="index.html">Logout</a>
+     </nav>
+
+     <div>
+        <h2>Dashboard</h2>
+        <button onclick="getNum()">refresh</button>
+     </div>
+
+     <div>
+         <table>
+            <thead>
+                  <tr>
+                     <th>Eleves</th>
+                     <th>Professeurs</th>
+                     <th>Administrations</th>
+                     <th>Classes</th>
+                  </tr>
+            </thead>
+
+            <tbody id="tbl_content">
+            </tbody>
+      </table>
+     </div>
+     
+    <script src="index.js"></script>
+</body>
+</html>

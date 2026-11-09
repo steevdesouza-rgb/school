@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- headers -->
+     <header id="up">
+        <h1>Academie de Saint Denis</h1>
+     </header>
+    
+    <!-- nav bar -->
+     <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="studenttable.html"> Tableau des eleves</a>
+        <a href="teachers.html">Tableau des professeurs</a>
+        <a href="admin.html">Tableau de l'administration</a>
+        <a href="index.html">Logout</a>
+     </nav>
+
+    <!-- saint denis table student -->
+    <div>
+        <h2>Tableau des professeurs</h2>
+        <span><button id="button" onclick="getProfesseurs()">Ok</button></span>
+    
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Gender</th>
+                    <th>Birthdate</th>
+                    <th>Email</th>
+                    <th>Courses</th>
+                    <th>Creation Date</th>
+                </tr>
+            </thead>
+            <tbody id="tabl">
+
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

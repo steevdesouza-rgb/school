@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- headers -->
+     <header id="up">
+        <h1>Academie de Saint Denis</h1>
+     </header>
+    
+    <!-- nav bar -->
+     <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="studenttable.html"> Tableau des eleves</a>
+        <a href="teachers.html">Tableau des professeurs</a>
+        <a href="admin.html">Tableau de l'administration</a>
+        <a href="index.html">Logout</a>
+     </nav>
+
+    <!-- saint denis table student -->
+    <div>
+        <div>
+        <span>
+            <h2>Tableau des eleves</h2>
+        </span>
+        <span><button id="button_event" onclick="getEleves()">Ok</button>
+            <p id="demo"></p>
+        </span>
+    </div>
+    
+    <div>        
+        <table>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Gender</th>
+                    <th>Birthdate</th>
+                    <th>Classes</th>
+                    <th>Creation Date</th>
+                </tr>
+                
+            </thead>
+           <tbody id="tablebody">
+            <!-- api -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="animate-on-scroll">
+        This element will animate when scrolled into view
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
