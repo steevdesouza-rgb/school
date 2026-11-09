@@ -8,38 +8,44 @@
 </head>
 
 <body>
-    <!-- headers -->
-    <header id="up">
-    <h1>Academie de Saint Denis</h1>
-    </header>
+    <div id="app">
+        <!-- headers -->
+        <header id="up">
+        <h1>Academie de Saint Denis</h1>
+        </header>
 
-    <div id="hello">
-        <h2>Login</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required
-                minlength="5"
-                maxlength="10"
-            /><br><br>
-            <label for="password">Password:</label>
-            <input
-                type="password" 
-                id="password" 
-                name="password" 
-                required
-            /><br><br>
-            <!-- <input 
-                type="submit" 
-                value="Login"
-            /> -->
-            <a href="/dashboard.html" class="button">login</a>
-        </form>
-    </div> 
+        <div id="hello">
+            <h2>Login</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required
+                    minlength="5"
+                    maxlength="10"
+                    v-model="username"
+                /><br><br>
+                <label for="password">Password:</label>
+                <input
+                    type="password" 
+                    id="password" 
+                    name="password"
+                    v-model="password" 
+                    required
+                /><br><br>
+                <!-- <input 
+                    type="submit" 
+                    value="Login"
+                /> -->
+                <a href="/dashboard.html" class="button">login</a>
+            </form>
+            <button @click="login">Login</button>
+        </div> 
+        </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="index.js" ></script>
+    <script src="app.js" ></script>
 </body>
 </html>
