@@ -7,43 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- headers -->
-     <header id="up">
-        <h1>Academie de Saint Denis</h1>
-     </header>
-    
-    <!-- nav bar -->
-     <nav>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="studenttable.html"> Tableau des eleves</a>
-        <a href="teachers.html">Tableau des professeurs</a>
-        <a href="admin.html">Tableau de l'administration</a>
-        <a href="index.html">Logout</a>
-     </nav>
+    <div id="administration">
+        <!-- headers -->
+        <header id="up">
+            <h1>Academie de Saint Denis</h1>
+        </header>
+        
+        <!-- nav bar -->
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="studenttable.html"> Tableau des eleves</a>
+            <a href="teachers.html">Tableau des professeurs</a>
+            <a href="admin.html">Tableau de l'administration</a>
+            <a href="index.html">Logout</a>
+        </nav>
 
-    <!-- saint denis table student -->
-    <div>
-        <h2>Tableau de l'administration</h2>
-        <span><button id="button" onclick="getAdmin()">Ok</button></span>
-    
-            
-        <table>
-            <thead>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Gender</th>
-                    <th>Birthdate</th>
-                    <th>Role</th>
-                    <th>Email</th>
-                    <th>Creation Date</th>
-                </tr>
-            </thead>
+        <!-- saint denis table student -->
+        <div>
+            <h2>Tableau de l'administration</h2>
+            <span><button id="button" onclick="getAdmin()">Ok</button></span>
+        
+                
+            <table>
+                <thead>
+                    <th v-for="header in headers" :key="header">
+                        {{ header }}
+                    </th>
+                </thead>
 
-            <tbody id="body"></tbody>
-        </table>
+                <tbody v-for="administration in administrations" :key="administration.id">
+                    <td>{{ administration.firstname }}</td>
+                    <td>{{ administration.lastname }}</td>
+                    <td>{{ administration.gender }}</td>
+                    <td>{{ administration.birthdate }}</td>
+                    <td>{{ administration.role }}</td>
+                    <td>{{ administration.email }}</td>
+                    <td>{{ administration.creation_date }}</td>
+                </tbody>
+            </table>
+        </div>
     </div>
     
-    <script src="index.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="admin.js"></script>
 </body>
 </html>
